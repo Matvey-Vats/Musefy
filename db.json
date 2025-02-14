@@ -1,0 +1,66 @@
+{
+	"categories": [
+		{ "id": 1, "name": "Guitars" },
+		{ "id": 2, "name": "Bass Guitars" },
+		{ "id": 3, "name": "Microphones" },
+		{ "id": 4, "name": "Keyboards" },
+		{ "id": 5, "name": "Drums" },
+		{ "id": 6, "name": "Speakers" }
+	],
+	"products": [
+		{
+			"id": 1,
+			"name": "Fender Stratocaster",
+			"price": 1200,
+			"categoryId": 1,
+			"brand": "Fender",
+			"image": "fender_stratocaster.jpg",
+			"description": "Legendary electric guitar with three pickups."
+		},
+		{
+			"id": 2,
+			"name": "Yamaha RBX170",
+			"price": 800,
+			"categoryId": 2,
+			"brand": "Yamaha",
+			"image": "yamaha_rbx170.jpg",
+			"description": "Bass guitar suitable for beginners and professionals."
+		},
+		{
+			"id": 3,
+			"name": "Shure SM58",
+			"price": 150,
+			"categoryId": 3,
+			"brand": "Shure",
+			"image": "shure_sm58.jpg",
+			"description": "Dynamic microphone for vocals and instruments."
+		},
+		{
+			"id": 4,
+			"name": "Roland FP-30X",
+			"price": 700,
+			"categoryId": 4,
+			"brand": "Roland",
+			"image": "roland_fp30x.jpg",
+			"description": "Digital piano with high-quality sound and weighted keys."
+		},
+		{
+			"id": 5,
+			"name": "Pearl Roadshow Drum Set",
+			"price": 900,
+			"categoryId": 5,
+			"brand": "Pearl",
+			"image": "pearl_roadshow.jpg",
+			"description": "Complete drum kit for beginners and professionals."
+		},
+		{
+			"id": 6,
+			"name": "JBL EON615",
+			"price": 500,
+			"categoryId": 6,
+			"brand": "JBL",
+			"image": "jbl_eon615.jpg",
+			"description": "15-inch powered speaker with professional sound quality."
+		}
+	]
+}
