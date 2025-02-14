@@ -1,0 +1,59 @@
+.header {
+	padding: 25px 0;
+	&Row {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.logo {
+		a {
+			color: #242424;
+			font-size: 36px;
+			font-weight: 700;
+			font-family: 'Nunito', sans-serif;
+		}
+	}
+
+	.cart {
+		position: relative;
+	}
+	i {
+		width: 22px;
+		height: 22px;
+		font-size: 18px;
+		position: absolute;
+		background-color: #fff;
+		color: #242424;
+		border-radius: 50%;
+		border: 0.5px solid #242424;
+		top: 0;
+		right: -5px;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&Menu {
+		ul {
+			display: flex;
+			align-items: center;
+
+			li {
+				a {
+					color: #242424;
+					font-size: 20px;
+					transition: opacity 0.3s ease-in;
+
+					&:hover {
+						opacity: 0.7;
+					}
+				}
+			}
+
+			li + li {
+				margin-left: 20px;
+			}
+		}
+	}
+}

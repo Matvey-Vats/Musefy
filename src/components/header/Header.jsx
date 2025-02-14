@@ -1,7 +1,39 @@
 import React from 'react'
+import { BiCart } from 'react-icons/bi'
+import { Link } from 'react-router-dom'
+import styles from './Header.module.scss'
 
 const Header = () => {
-	return <div>Header</div>
+	return (
+		<header className={styles.header}>
+			<div className='container'>
+				<div className={styles.headerRow}>
+					<div className={styles.logo}>
+						<h1>
+							<Link href='/'>Musefy</Link>
+						</h1>
+					</div>
+					<nav className={styles.headerMenu}>
+						<ul>
+							<li>
+								<Link to='catalog'>Catalog</Link>
+							</li>
+							<li>
+								<Link to='about'>About Us</Link>
+							</li>
+							<li>
+								<Link to='contact'>Contact Us</Link>
+							</li>
+						</ul>
+					</nav>
+					<a href='#!' className={styles.cart}>
+						<BiCart className={styles.cartIcon} color='#242424' size={40} />
+						{/* <i>0</i> */}
+					</a>
+				</div>
+			</div>
+		</header>
+	)
 }
 
 export default Header
