@@ -1,0 +1,28 @@
+.catalogTop {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+
+	.title {
+		font-weight: 700;
+		font-family: 'Nunito', sans-serif;
+		font-size: 30px;
+	}
+}
+
+.filters {
+	margin-top: 30px;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+
+.box {
+	margin-top: 70px;
+	display: grid;
+	grid-template-columns: repeat(3, 350px);
+	gap: 60px 20px;
+	justify-content: space-between;
+	align-items: center;
+}

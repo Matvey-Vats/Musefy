@@ -1,0 +1,38 @@
+.cardCatalog {
+	max-width: 350px;
+
+	.cardImg {
+		width: 350px;
+		aspect-ratio: 1;
+	}
+
+	.content {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 30px 5px;
+
+		.title {
+			font-weight: 700;
+			color: #242424;
+			font-size: 22px;
+		}
+		.price {
+			font-family: 'Nunito', sans-serif;
+			justify-self: flex-end;
+			font-weight: 500;
+		}
+
+		.available {
+			align-self: center;
+		}
+
+		.button {
+			justify-self: flex-end;
+			background-color: #242424;
+			color: #fff;
+			width: 100px;
+			height: 40px;
+			border-radius: 10px;
+		}
+	}
+}

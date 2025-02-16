@@ -36,6 +36,7 @@
 			"price": 1200,
 			"categoryId": 1,
 			"brand": "Fender",
+			"isInStock": false,
 			"image": "https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/bdb/_56/561528/18054206_800.jpg",
 			"description": "Legendary electric guitar with three pickups."
 		},
@@ -45,6 +46,7 @@
 			"price": 800,
 			"categoryId": 2,
 			"brand": "Yamaha",
+			"isInStock": true,
 			"image": "https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/bdb/_60/605623/19712389_800.jpg",
 			"description": "Bass guitar suitable for beginners and professionals."
 		},
@@ -54,6 +56,7 @@
 			"price": 150,
 			"categoryId": 3,
 			"brand": "Shure",
+			"isInStock": true,
 			"image": "https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/bdb/_10/105767/8805536_800.jpg",
 			"description": "Dynamic microphone for vocals and instruments."
 		},
@@ -63,6 +66,7 @@
 			"price": 700,
 			"categoryId": 4,
 			"brand": "Roland",
+			"isInStock": true,
 			"image": "https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/bdb/_51/510682/16037093_800.jpg",
 			"description": "Digital piano with high-quality sound and weighted keys."
 		},
@@ -72,6 +76,7 @@
 			"price": 900,
 			"categoryId": 5,
 			"brand": "Pearl",
+			"isInStock": false,
 			"image": "https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/bdb/_55/551838/17954507_800.jpg",
 			"description": "Complete drum kit for beginners and professionals."
 		},
@@ -81,6 +86,7 @@
 			"price": 500,
 			"categoryId": 6,
 			"brand": "JBL",
+			"isInStock": false,
 			"image": "https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/bdb/_53/531540/16959655_800.jpg",
 			"description": "15-inch powered speaker with professional sound quality."
 		},
@@ -90,6 +96,7 @@
 			"price": 1400,
 			"categoryId": 1,
 			"brand": "ESP",
+			"isInStock": true,
 			"image": "https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/bdb/_45/458986/17125241_800.jpg",
 			"description": "ST Style Kirk Hammett Signature Model Alder Body Maple Neck Macassar Ebony Fingerboard Neck Mount: Neck-Through Neck Shape: Extra Slim 'U' 24 Extra Jumbo Frets Locking Nut Nut Width: 42 mm (1.65) Scale: 648 mm (25.5) Fingerboard Radius: 350 mm (13.78) EMG Bone Breaker active pickup (bridge) EMG Bone Breaker active pickup (neck) 2 volume controls Tone control 3-position toggle switch Floyd Rose 1000 tremolo Hardware finish: Black LTD tuning machine heads Includes case Color: Black Original strings: D'Addario XL120 (009. - 042.)"
 		},
@@ -99,6 +106,7 @@
 			"price": 750,
 			"categoryId": 1,
 			"brand": "Epiphone",
+			"isInStock": false,
 			"image": "https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/bdb/_50/501152/15992974_800.jpg",
 			"description": "Inspired by Gibson J-45 Body Shape Sloped Shouldered Dreadnought Solid Sitka spruce top Solid mahogany back and sides 4-layer binding on the lid 1 layer binding on the bottom Mahogany neck Rounded C Neck Profile Indian Laurel Fingerboard Antique Ivory binding on the fingerboard Mother of pearl dot inlays on fingerboard Scale length: 628 mm (24.724) Nut width: 43 mm (1.693) bone nut 20 frets Fishman Sonicore pickup system with rosette volume and tone controls Color: Aged Vintage Sunburst"
 		},
@@ -108,6 +116,7 @@
 			"price": 2000,
 			"categoryId": 7,
 			"brand": "Denon DJ",
+			"isInStock": true,
 			"image": "https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/bdb/_56/568912/18459202_800.jpg",
 			"description": "Sistema de DJ autónomo de 4 decks Con transmisión Wi-Fi Pantalla multitáctil HD de 10 (con ajuste de inclinación) Software incluido: Denon Engine OS/ Prime OS (autónomo) Serato DJ Pro, compatible con Serato DVS Servicios de transmisión soportados: Amazon Music Unlimited, TIDAL, Beatsource, Beatport, Soundcloud GO+ y Dropbox Función de grabación: Grabación de audio directa desde los equipos a la memoria USB / tarjeta SD / disco duro SATA de 2,5 Salida de zona (opcionalmente envía una lista de reproducción separada a una segunda sala) Muestreador integrado: Muestreador de pad de disparo interno Efectos de interpretación 26 nuevos efectos con indicación de pantalla OLED y controles de parámetros Efectos de barrido: 4 efectos de filtro dinámico Efectos táctiles X/Y: Control de efectos a través de la pantalla táctil Conexiones para almacenamiento de reproducción de música: 4 x USB, 1 x SD y una bahía de unidad SATA de 2,5 integrada (para montar un disco duro) Formatos de audio soportados: AAC/M4A, AIF/AIFF (44,1 - 192 kHz, 16 - 32 bits), ALAC, FLAC, MP3 (32 - 320 kbps, VBR), MP4, Ogg Vorbis, WAV (44,1 - 192 kHz, 16 - 32 bits) Rueda Jog de metal resistente con pantalla HD central Control de iluminación: DMX y Smart Lightning controlables mediante pantalla de disco táctil e interruptor de sonido opcional (artículo nº495060) no incluido 2 canales de micrófono con control de tono y efecto de voz Interfaz de audio Denon DJ Legacy de 24 bits Soporta teclado USB para encontrar pistas rápidamente Dimensiones (ancho x profundo x alto): 728 x 497 x 104 mm Peso: 9.7 kg"
 		},
@@ -116,6 +125,7 @@
 			"name": "Harley Benton HBZ-2004 Deluxe Series",
 			"price": 299,
 			"categoryId": 2,
+			"isInStock": true,
 			"brand": "Harley Benton",
 			"image": "https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/bdb/_26/264956/14715621_800.jpg",
 			"description": "Ovangkol body Neck through body (neck thru) 7-Piece Mahogany/Maple/Nato Neck Black Walnut Fingerboard Abalone oval shaped inlays 24 frets Capo width: 40mm 864mm long scale 2 ceramic bar pads Active preamplifier black hardware Die-cast tuning pegs String gauge: 45-105 Finish: Natural satin"
@@ -126,6 +136,7 @@
 			"price": 600,
 			"categoryId": 1,
 			"brand": "Fender",
+			"isInStock": false,
 			"image": "https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/bdb/_60/608518/19758449_800.jpg",
 			"description": "Electric guitar Poplar wood body Bolt-on maple neck Indian Laurel Fingerboard White dot fretboard inlays Modern 'C' neck profile Fingerboard Radius: 241mm (9.5”) Scale length: 648 mm (25.5) Nut width: 42.86 mm (1.6875) Micarta nut 21 Medium Jumbo frets Pickups: 2 Player Standard Tele Single Coils Master volume and master tone controls 3-way pickup switch 3-ply white pickguard Standard Tele Steg bridge with string passage through the body and chrome-plated steel block saddles Fender Standard mechanics with Hex buttons Chrome hardware Original factory string: Nickel Plated Steel .009 - .042 Color: 3-Color Sunburst"
 		}

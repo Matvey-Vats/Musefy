@@ -1,0 +1,24 @@
+.categories {
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		column-gap: 10px;
+
+		li {
+			cursor: pointer;
+			border: 1px solid #242424;
+			padding: 5px 10px;
+			border-radius: 8px;
+
+			&:active {
+				transform: scale(0.97);
+			}
+
+			&.active {
+				background-color: #242424;
+				color: #fff;
+			}
+		}
+	}
+}

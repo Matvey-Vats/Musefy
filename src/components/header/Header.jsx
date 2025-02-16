@@ -26,10 +26,10 @@ const Header = () => {
 							</li>
 						</ul>
 					</nav>
-					<a href='#!' className={styles.cart}>
+					<Link to='cart' className={styles.cart}>
 						<BiCart className={styles.cartIcon} color='#242424' size={40} />
 						{/* <i>0</i> */}
-					</a>
+					</Link>
 				</div>
 			</div>
 		</header>

@@ -1,0 +1,29 @@
+.searchBlock {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.input {
+	width: 300px;
+	border: 1px solid #242424;
+	padding: 10px;
+	border-radius: 7px;
+	margin-right: 10px;
+	font-size: 18px;
+	font-family: 'Nunito', sans-serif;
+}
+
+.button {
+	background-color: #242424;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+	border-radius: 10px;
+	cursor: pointer;
+
+	&:active {
+		transform: scale(0.95);
+	}
+}

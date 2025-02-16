@@ -1,0 +1,33 @@
+.block {
+	padding: 70px 0;
+	margin: 0 auto;
+	max-width: 750px;
+	.mainTitle {
+		font-size: 30px;
+		font-weight: 700;
+		font-family: 'Nunito', sans-serif;
+		margin-bottom: 15px;
+	}
+
+	p + p {
+		margin-bottom: 25px;
+	}
+
+	.secondTitle {
+		font-size: 26px;
+		font-family: 'Nunito', sans-serif;
+		font-weight: 700;
+		margin-bottom: 15px;
+	}
+
+	ul {
+		li {
+			font-family: 'Nunito', sans-serif;
+			font-weight: 600;
+			font-size: 20px;
+		}
+		li + li {
+			margin-top: 10px;
+		}
+	}
+}

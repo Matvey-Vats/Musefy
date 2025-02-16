@@ -1,0 +1,42 @@
+.label {
+	font-size: 20px;
+	font-family: 'Nunito', sans-serif;
+	margin-bottom: 10px;
+	cursor: pointer;
+
+	&Text {
+		span {
+			text-decoration: underline dashed;
+		}
+	}
+}
+
+.popup {
+	border: 1px solid #242424;
+	border-radius: 8px;
+	display: none;
+	position: absolute;
+	background-color: #fff;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+	z-index: 100;
+	width: 100px;
+
+	&.open {
+		display: block;
+	}
+
+	ul {
+		li {
+			border-radius: 5px;
+			padding: 5px;
+			&.active {
+				color: #fff;
+				background-color: #242424;
+			}
+		}
+
+		li + li {
+			margin-top: 10px;
+		}
+	}
+}
