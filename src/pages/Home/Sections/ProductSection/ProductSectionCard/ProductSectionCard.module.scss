@@ -1,0 +1,26 @@
+.card {
+	text-align: center;
+
+	img {
+		width: 100%;
+		max-width: 400px;
+		margin-bottom: 12px;
+	}
+
+	div {
+		p {
+			font-weight: 700;
+			font-family: 'Nunito', sans-serif;
+			font-size: 20px;
+			margin-bottom: 5px;
+		}
+		h4 {
+			font-family: 'Nunito', sans-serif;
+			font-size: 24px;
+		}
+	}
+}
+
+.card + .card {
+	margin-left: 100px;
+}
