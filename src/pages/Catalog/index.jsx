@@ -6,6 +6,24 @@ import Sort from '../../components/Sort'
 import styles from './Catalog.module.scss'
 
 const Catalog = () => {
+	const [products, setProducts] = React.useState([])
+
+	React.useEffect(() => {
+		const categoryId = ''
+		const sortBy = ''
+		const sortProperty = ''
+
+		fetch(
+			`http://localhost:3000/products?categoryId=${categoryId}&_sort=${sortBy}&_order=${sortProperty}`
+		)
+			.then(res => {
+				return res.json()
+			})
+			.then(data => {
+				setProducts(data)
+			})
+	}, [])
+
 	return (
 		<div className='container'>
 			<div className={styles.catalogTop}>
@@ -17,13 +35,8 @@ const Catalog = () => {
 				<Sort />
 			</div>
 			<div className={styles.box}>
-				<CardCatalog />
-				<CardCatalog />
-				<CardCatalog />
-				<CardCatalog />
-				<CardCatalog />
-				<CardCatalog />
-				<CardCatalog />
+				{products.length > 0 &&
+					products.map(obj => <CardCatalog key={obj.id} {...obj} />)}
 			</div>
 		</div>
 	)
