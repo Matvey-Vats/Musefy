@@ -10,10 +10,10 @@ const initialState = {
 export const fetchProducts = createAsyncThunk(
 	'product/fetchProducts',
 	async params => {
-		const { category, sortBy, order } = params
+		const { category, sortBy, order, search } = params
 
 		const res = await fetch(
-			`http://localhost:3000/products?${category}&_sort=${sortBy}&_order=${order}`
+			`http://localhost:3000/products?${category}&_sort=${sortBy}&_order=${order}${search}`
 		)
 		const data = await res.json()
 		return data
@@ -39,6 +39,10 @@ export const productSlice = createSlice({
 		setCategories(state, action) {
 			state.categories = action.payload
 		},
+		getProductById(state, action) {
+			const findProduct = state.products.find(obj => obj.id === action.payload)
+			return findProduct
+		},
 	},
 	extraReducers: builder => {
 		builder.addCase(fetchProducts.pending, state => {
@@ -60,6 +64,6 @@ export const productSlice = createSlice({
 	},
 })
 
-export const { setItems, setCategories } = productSlice.actions
+export const { setItems, setCategories, getProductById } = productSlice.actions
 
 export default productSlice.reducer

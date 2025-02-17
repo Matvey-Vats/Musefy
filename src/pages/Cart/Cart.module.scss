@@ -7,84 +7,8 @@
 	.cartRow {
 		flex: 1;
 		display: flex;
-		flex-direction: column;
+		flex-wrap: wrap;
 		row-gap: 15px;
-
-		.cartItem {
-			border: 1px solid #242424;
-			border-radius: 10px;
-			padding: 20px;
-			max-width: 850px;
-			img {
-				width: 250px;
-			}
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-
-			.cartItemContent {
-				display: grid;
-				grid-template-columns: repeat(2, 1fr);
-				gap: 10px;
-				align-items: center;
-
-				.itemTitle {
-					font-size: 24px;
-					font-weight: 600;
-					font-family: 'Nunito', sans-serif;
-				}
-				.itemPrice {
-					font-family: 'Nunito', sans-serif;
-				}
-
-				.itemCount {
-					display: flex;
-					align-items: center;
-					column-gap: 10px;
-
-					span {
-						font-size: 25px;
-						font-weight: 600;
-					}
-					.minusBtn {
-						display: flex;
-						align-items: center;
-						justify-content: center;
-						width: 30px;
-						height: 30px;
-						border: 1px solid #242424;
-						border-radius: 50%;
-
-						&:active {
-							transform: scale(0.95);
-						}
-					}
-
-					.plusBtn {
-						display: flex;
-						align-items: center;
-						justify-content: center;
-						width: 30px;
-						height: 30px;
-						border: 1px solid transparent;
-						background-color: #242424;
-						color: #fff;
-						border-radius: 50%;
-						transition: background-color 0.3s ease;
-
-						&:hover {
-							background-color: transparent;
-							border-color: #242424;
-							color: #242424;
-						}
-
-						&:active {
-							transform: scale(0.95);
-						}
-					}
-				}
-			}
-		}
 	}
 
 	.sidebar {

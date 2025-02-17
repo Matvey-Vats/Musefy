@@ -36,8 +36,15 @@
 					color: #242424;
 				}
 
-				&:active {
+				&:not(:disabled):active {
 					transform: scale(0.95);
+				}
+				&:disabled {
+					opacity: 0.4;
+					cursor: default;
+					background-color: transparent;
+					color: #242424;
+					border-color: #242424;
 				}
 			}
 		}

@@ -1,11 +1,15 @@
+import clsx from 'clsx'
 import React from 'react'
+import { useDispatch } from 'react-redux'
 import { useNavigate, useParams } from 'react-router-dom'
+import { addProduct } from '../../../redux/slices/cartSlice'
 import styles from './ProductDetail.module.scss'
 
 const ProductDetail = () => {
 	const [product, setProduct] = React.useState()
 	const { id } = useParams()
 	const navigate = useNavigate()
+	const dispatch = useDispatch()
 
 	React.useEffect(() => {
 		const fetchProduct = async () => {
@@ -44,7 +48,15 @@ const ProductDetail = () => {
 
 						<p>{product.description}</p>
 
-						<button className={styles.cartBtn}>Add to cart</button>
+						<button
+							disabled={!product.isInStock}
+							onClick={() => dispatch(addProduct(product))}
+							className={clsx(styles.cartBtn, {
+								[styles.btnDisabled]: !product.isInStock,
+							})}
+						>
+							Add to cart
+						</button>
 					</div>
 				</div>
 			</div>

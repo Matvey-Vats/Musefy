@@ -54,11 +54,7 @@ const ProductSection = () => {
 						: items.length > 0 &&
 						  items.slice(0, 7).map(item => (
 								<SwiperSlide key={item.id}>
-									<ProductSectionCard
-										image={item.image}
-										name={item.name}
-										price={item.price}
-									/>
+									<ProductSectionCard {...item} />
 								</SwiperSlide>
 						  ))}
 				</Swiper>

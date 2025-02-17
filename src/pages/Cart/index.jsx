@@ -1,35 +1,32 @@
 import React from 'react'
-import { BiPlusMedical } from 'react-icons/bi'
-import { FaMinus } from 'react-icons/fa'
+import { useSelector } from 'react-redux'
 import styles from './Cart.module.scss'
-import cartImg from '/guitar.jpg'
+import CartEmpty from './CartEmpty'
+import CartItem from './CartItem'
 
 const Cart = () => {
+	const { totalPrice, products } = useSelector(state => state.cart)
+	const totalCount = products.reduce((sum, item) => sum + item.count, 0)
+
+	React.useEffect(() => {
+		window.scrollTo(0, 0)
+	}, [])
+
+	if (!totalCount) {
+		return <CartEmpty />
+	}
 	return (
 		<div className={styles.cartBlock}>
 			<div className='container'>
 				<div className={styles.wrapper}>
 					<div className={styles.cartRow}>
-						<div className={styles.cartItem}>
-							<img src={cartImg} alt='' />
-							<div className={styles.cartItemContent}>
-								<h4 className={styles.itemTitle}>Fender</h4>
-								<p className={styles.itemPrice}>400$</p>
-								<div className={styles.itemCount}>
-									<button className={styles.minusBtn}>
-										<FaMinus size={20} />
-									</button>
-									<span>0</span>
-									<button className={styles.plusBtn}>
-										<BiPlusMedical size={20} />
-									</button>
-								</div>
-							</div>
-						</div>
+						{products.map(obj => (
+							<CartItem key={obj.id} {...obj} />
+						))}
 					</div>
 					<div className={styles.sidebar}>
-						<h3>TOTAL PRICE</h3>
-						<p>TOTAL COUNT</p>
+						<h3>{totalPrice}$</h3>
+						<p>Count: {totalCount}</p>
 						<button>BUY NOW</button>
 					</div>
 				</div>

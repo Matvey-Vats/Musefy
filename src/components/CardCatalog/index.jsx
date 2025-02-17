@@ -1,8 +1,35 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
+import { addProduct } from '../../redux/slices/cartSlice'
 import styles from './CardCatalog.module.scss'
+const CardCatalog = ({
+	id,
+	name,
+	price,
+	categoryId,
+	brand,
+	isInStock,
+	image,
+	description,
+}) => {
+	const dispatch = useDispatch()
 
-const CardCatalog = ({ id, image, name, price, isInStock }) => {
+	const handleAddToCart = () => {
+		const product = {
+			id,
+			name,
+			price,
+			categoryId,
+			brand,
+			isInStock,
+			image,
+			description,
+		}
+
+		dispatch(addProduct(product))
+	}
+
 	return (
 		<div className={styles.cardCatalog}>
 			<Link to={`/catalog/${id}`}>
@@ -14,7 +41,9 @@ const CardCatalog = ({ id, image, name, price, isInStock }) => {
 				</Link>
 				<p className={styles.price}>{price}$</p>
 				<p className={isInStock ? styles.available : ''}>In Stock</p>
-				<button className={styles.button}>Add to cart</button>
+				<button onClick={handleAddToCart} className={styles.button}>
+					Add to cart
+				</button>
 			</div>
 		</div>
 	)

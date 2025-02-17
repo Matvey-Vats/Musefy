@@ -1,9 +1,14 @@
 import React from 'react'
 import { BiCart } from 'react-icons/bi'
+import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import styles from './Header.module.scss'
 
 const Header = () => {
+	const products = useSelector(state => state.cart.products)
+
+	const totalCount = products.reduce((sum, item) => sum + item.count, 0)
+
 	return (
 		<header className={styles.header}>
 			<div className='container'>
@@ -28,7 +33,7 @@ const Header = () => {
 					</nav>
 					<Link to='cart' className={styles.cart}>
 						<BiCart className={styles.cartIcon} color='#242424' size={40} />
-						{/* <i>0</i> */}
+						{totalCount > 0 && <i>{totalCount}</i>}
 					</Link>
 				</div>
 			</div>

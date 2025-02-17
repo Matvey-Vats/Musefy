@@ -13,7 +13,7 @@ import styles from './Catalog.module.scss'
 const Catalog = () => {
 	const dispatch = useDispatch()
 	const { products, status } = useSelector(state => state.product)
-	const { categoryId, sort } = useSelector(state => state.filter)
+	const { categoryId, sort, searchValue } = useSelector(state => state.filter)
 
 	const onChangeCategory = React.useCallback(id => {
 		dispatch(setCategoryId(id))
@@ -23,12 +23,14 @@ const Catalog = () => {
 		const sortBy = sort.sortProperty.replace('-', '')
 		const order = sort.sortProperty.includes('-') ? 'asc' : 'desc'
 		const category = categoryId > 0 ? `categoryId=${categoryId}` : ''
+		const search = searchValue ? `&q=${searchValue}` : ''
 
 		dispatch(
 			fetchProducts({
 				category,
 				sortBy,
 				order,
+				search,
 			})
 		)
 	}
