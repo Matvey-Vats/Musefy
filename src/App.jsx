@@ -8,6 +8,7 @@ import Home from './pages/Home'
 import NotFound from './pages/NotFound'
 
 import { Provider } from 'react-redux'
+import ProductDetail from './pages/Catalog/ProductDetail'
 import { store } from './redux/store'
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
 				<Route path='/' element={<MainLayout />}>
 					<Route path='' element={<Home />} />
 					<Route path='catalog' element={<Catalog />} />
+					<Route path='catalog/:id' element={<ProductDetail />} />
 					<Route path='contact' element={<Contact />} />
 					<Route path='about' element={<About />} />
 					<Route path='cart' element={<Cart />} />

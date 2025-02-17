@@ -1,0 +1,69 @@
+.block {
+	.wrapper {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+
+		img {
+			width: 500px;
+		}
+
+		.content {
+			&Top {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				margin-bottom: 12px;
+			}
+			p {
+				margin-top: 30px;
+			}
+			.cartBtn {
+				float: right;
+				margin-top: 30px;
+				color: #fff;
+				background-color: #242424;
+				width: 120px;
+				height: 40px;
+				border-radius: 7px;
+				text-transform: uppercase;
+				border: 1px solid transparent;
+				transition: background-color 0.3s ease-in;
+
+				&:hover {
+					background-color: transparent;
+					border-color: #242424;
+					color: #242424;
+				}
+
+				&:active {
+					transform: scale(0.95);
+				}
+			}
+		}
+		.title {
+			font-size: 28px;
+			font-weight: 700;
+			font-family: 'Nunito', sans-serif;
+		}
+
+		.price {
+			font-size: 22px;
+			font-family: 'Nunito', sans-serif;
+			font-weight: 600;
+		}
+	}
+}
+
+.available,
+.inavailable {
+	font-weight: 700;
+	font-family: 'Nunito', sans-serif;
+}
+
+.available {
+	color: rgb(77, 206, 77);
+}
+.inavailable {
+	color: rgb(236, 44, 44);
+}

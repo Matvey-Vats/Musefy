@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import styles from './ProductSection.module.scss'
 
 import 'swiper/css'
@@ -62,9 +63,9 @@ const ProductSection = () => {
 						  ))}
 				</Swiper>
 				<div className={styles.linkBlock}>
-					<a className={styles.link} href='#!'>
+					<Link className={styles.link} to='catalog'>
 						View all
-					</a>
+					</Link>
 				</div>
 			</div>
 		</section>

@@ -1,16 +1,17 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import styles from './CardCatalog.module.scss'
 
-const CardCatalog = ({ image, name, price, isInStock }) => {
+const CardCatalog = ({ id, image, name, price, isInStock }) => {
 	return (
 		<div className={styles.cardCatalog}>
-			<a href='#!'>
+			<Link to={`/catalog/${id}`}>
 				<img className={styles.cardImg} src={image} alt='' />
-			</a>
+			</Link>
 			<div className={styles.content}>
-				<a href='#!'>
+				<Link to={`/catalog/${id}`}>
 					<h4 className={styles.title}>{name}</h4>
-				</a>
+				</Link>
 				<p className={styles.price}>{price}$</p>
 				<p className={isInStock ? styles.available : ''}>In Stock</p>
 				<button className={styles.button}>Add to cart</button>

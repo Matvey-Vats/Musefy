@@ -1,14 +1,14 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import CardCatalog from '../../components/CardCatalog'
+import CardLoader from '../../components/CardCatalog/CardLoader'
 import Categories from '../../components/Categories'
 import Search from '../../components/search/Search'
-import Sort from '../../components/Sort'
-import styles from './Catalog.module.scss'
 
-import CardLoader from '../../components/CardCatalog/CardLoader'
+import Sort from '../../components/Sort'
 import { setCategoryId } from '../../redux/slices/filterSlice'
 import { fetchProducts } from '../../redux/slices/productSlice'
+import styles from './Catalog.module.scss'
 
 const Catalog = () => {
 	const dispatch = useDispatch()
