@@ -7,9 +7,12 @@ import Contact from './pages/Contact'
 import Home from './pages/Home'
 import NotFound from './pages/NotFound'
 
+import { Provider } from 'react-redux'
+import { store } from './redux/store'
+
 function App() {
 	return (
-		<>
+		<Provider store={store}>
 			<Routes>
 				<Route path='/' element={<MainLayout />}>
 					<Route path='' element={<Home />} />
@@ -20,7 +23,7 @@ function App() {
 					<Route path='*' element={<NotFound />} />
 				</Route>
 			</Routes>
-		</>
+		</Provider>
 	)
 }
 

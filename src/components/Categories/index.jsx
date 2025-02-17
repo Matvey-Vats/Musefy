@@ -1,22 +1,14 @@
 import React from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { fetchCategories } from '../../redux/slices/productSlice'
 import styles from './Categories.module.scss'
 
-const Categories = () => {
-	const [categories, setCategories] = React.useState([])
-	const [isActive, setIsActive] = React.useState(0)
-
-	const onClickCategory = id => {
-		setIsActive(id)
-	}
+const Categories = ({ categoryId, onChangeCategory }) => {
+	const dispatch = useDispatch()
+	const { categories } = useSelector(state => state.product)
 
 	React.useEffect(() => {
-		fetch('http://localhost:3000/categories')
-			.then(res => {
-				return res.json()
-			})
-			.then(data => {
-				setCategories([{ id: 0, name: 'All' }, ...data])
-			})
+		dispatch(fetchCategories())
 	}, [])
 
 	return (
@@ -25,8 +17,8 @@ const Categories = () => {
 				{categories.length > 0 &&
 					categories.map(obj => (
 						<li
-							onClick={() => onClickCategory(+obj.id)}
-							className={isActive === +obj.id ? styles.active : ''}
+							onClick={() => onChangeCategory(obj.id)}
+							className={categoryId === obj.id ? styles.active : ''}
 							key={obj.id}
 						>
 							{obj.name}
