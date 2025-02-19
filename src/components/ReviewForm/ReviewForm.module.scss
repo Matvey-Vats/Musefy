@@ -1,0 +1,49 @@
+.block {
+	margin-top: 100px;
+	text-align: center;
+
+	.form {
+		margin-inline: auto;
+		max-width: 500px;
+
+		.rating {
+		}
+		input {
+			font-size: 20px;
+			outline: none;
+			border: none;
+			border-bottom: 1px solid #242424;
+			border-radius: 0;
+		}
+		input + input {
+			margin-bottom: 20px;
+		}
+		textarea {
+			font-size: 20px;
+			height: 200px;
+			resize: none;
+		}
+		span {
+			font-family: 'Nunito', sans-serif;
+			font-size: 17px;
+			color: rgba($color: #242424, $alpha: 0.5);
+		}
+
+		button {
+			background-color: #242424;
+			color: #fff;
+			height: 40px;
+			border-radius: 10px;
+			border: 1px solid transparent;
+			font-weight: 700;
+			font-size: 20px;
+			transition: background-color 0.3s ease-in-out;
+
+			&:hover {
+				border-color: #242424;
+				background-color: transparent;
+				color: #242424;
+			}
+		}
+	}
+}

@@ -28,6 +28,39 @@ export const fetchCategories = createAsyncThunk(
 	}
 )
 
+export const addReview = createAsyncThunk(
+	'product/AddReview',
+	async ({ productId, review }, { rejectWithValue }) => {
+		try {
+			const productResponse = await fetch(
+				`http://localhost:3000/products/${productId}`
+			)
+			const product = await productResponse.json()
+
+			const updatedProduct = {
+				...product,
+				reviews: [...product.reviews, review],
+			}
+
+			const response = await fetch(
+				`http://localhost:3000/products/${productId}`,
+				{
+					method: 'PUT',
+					headers: { 'Content-Type': 'application/json' },
+					body: JSON.stringify(updatedProduct),
+				}
+			)
+			if (!response.ok) {
+				throw new Error('Failed to add review')
+			}
+
+			return { productId, review }
+		} catch (error) {
+			return rejectWithValue(error.message)
+		}
+	}
+)
+
 export const productSlice = createSlice({
 	name: 'product',
 	initialState,
@@ -59,6 +92,15 @@ export const productSlice = createSlice({
 		// fetchCategories
 		builder.addCase(fetchCategories.fulfilled, (state, action) => {
 			state.categories = [{ id: 0, name: 'All' }, ...action.payload]
+		})
+		// addReview
+		builder.addCase(addReview.fulfilled, (state, action) => {
+			const product = state.products.find(
+				p => p.id === action.payload.productId
+			)
+			if (product) {
+				product.reviews.push(action.payload.review)
+			}
 		})
 	},
 })

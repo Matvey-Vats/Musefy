@@ -2,6 +2,8 @@ import clsx from 'clsx'
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import { useNavigate, useParams } from 'react-router-dom'
+import ReviewForm from '../../../components/ReviewForm'
+import ReviewList from '../../../components/ReviewList'
 import { addProduct } from '../../../redux/slices/cartSlice'
 import styles from './ProductDetail.module.scss'
 
@@ -60,6 +62,22 @@ const ProductDetail = () => {
 					</div>
 				</div>
 			</div>
+			<ReviewForm productId={id} />
+			{product.reviews.length > 0 ? (
+				<ReviewList product={product} />
+			) : (
+				<p
+					style={{
+						textAlign: 'center',
+						marginTop: '50px',
+						fontFamily: 'Nunito',
+						fontSize: '22px',
+						opacity: '0.7',
+					}}
+				>
+					There are no reviews yet
+				</p>
+			)}
 		</div>
 	)
 }
