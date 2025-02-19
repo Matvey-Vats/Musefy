@@ -5,18 +5,17 @@ const initialState = {
 	categories: [],
 	status: 'loading',
 }
-// ?categoryId=${categoryId}&_sort=${sortBy}&_order=${sortProperty}
-// &_sort=${sortBy}&_order=${sortProperty}
+
 export const fetchProducts = createAsyncThunk(
 	'product/fetchProducts',
 	async params => {
-		const { category, sortBy, order, search } = params
+		const { category, sortBy, order, search, currentPage } = params
 
 		const res = await fetch(
-			`http://localhost:3000/products?${category}&_sort=${sortBy}&_order=${order}${search}`
+			`http://localhost:3000/products?_page=${currentPage}&${category}&_sort=${sortBy}&_order=${order}${search}`
 		)
 		const data = await res.json()
-		return data
+		return data.data
 	}
 )
 

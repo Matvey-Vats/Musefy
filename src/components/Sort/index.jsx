@@ -5,7 +5,7 @@ import styles from './Sort.module.scss'
 
 import { setSort } from '../../redux/slices/filterSlice'
 
-const sortList = [
+export const sortList = [
 	{ name: 'Popular DESC', sortProperty: 'rating' },
 	{ name: 'Popular ASC', sortProperty: '-rating' },
 	{ name: 'Price DESC', sortProperty: 'price' },

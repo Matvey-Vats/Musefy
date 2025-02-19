@@ -1,20 +1,26 @@
 import React from 'react'
 import { BiSearch } from 'react-icons/bi'
 import { useDispatch, useSelector } from 'react-redux'
-import { setSearchValue } from '../../redux/slices/filterSlice'
 import styles from './Search.module.scss'
 
 const Search = () => {
 	const dispatch = useDispatch()
+	const [text, setText] = React.useState('')
 	const { searchValue } = useSelector(state => state.filter)
 
-	const handleSubmit = () => {}
+	const handleChange = e => {
+		setText(e.target.value)
+	}
+
+	const handleSubmit = () => {
+		console.log(text)
+	}
 
 	return (
 		<div className={styles.searchBlock}>
 			<input
-				value={searchValue}
-				onChange={e => dispatch(setSearchValue(e.target.value))}
+				value={text}
+				onChange={handleChange}
 				className={styles.input}
 				type='text'
 				placeholder='Search...'

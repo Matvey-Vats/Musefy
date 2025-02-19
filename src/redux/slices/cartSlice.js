@@ -25,8 +25,9 @@ const cartSlice = createSlice({
 			)
 		},
 		minusProduct(state, action) {
-			state.products = state.products.filter(obj => obj.count > 0)
+			state.products = state.products.filter(obj => obj.count >= 1)
 			const findProduct = state.products.find(obj => obj.id === action.payload)
+			state.totalPrice = state.totalPrice - findProduct.price
 
 			if (findProduct) findProduct.count--
 		},

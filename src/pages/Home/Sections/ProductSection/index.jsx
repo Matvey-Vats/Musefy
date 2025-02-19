@@ -12,8 +12,10 @@ import ProductCardLoader from './ProductSectionCard/ProductCardLoader'
 const ProductSection = () => {
 	const [items, setItems] = React.useState([])
 	const [isLoading, setIsLoading] = React.useState(true)
+	const [isError, setIsError] = React.useState(false)
 
 	React.useEffect(() => {
+		setIsError(false)
 		setIsLoading(true)
 
 		fetch('http://localhost:3000/products')
@@ -22,6 +24,11 @@ const ProductSection = () => {
 			})
 			.then(data => {
 				setItems(data)
+			})
+			.catch(() => {
+				setIsError(true)
+			})
+			.finally(() => {
 				setIsLoading(false)
 			})
 	}, [])
@@ -49,6 +56,11 @@ const ProductSection = () => {
 						932: { slidesPerView: 2 },
 					}}
 				>
+					{isError && (
+						<div className={styles.error}>
+							Unfortunately, the data could not be retrieved. try to look later
+						</div>
+					)}
 					{isLoading
 						? skeletons
 						: items.length > 0 &&

@@ -40,8 +40,14 @@ const CardCatalog = ({
 					<h4 className={styles.title}>{name}</h4>
 				</Link>
 				<p className={styles.price}>{price}$</p>
-				<p className={isInStock ? styles.available : ''}>In Stock</p>
-				<button onClick={handleAddToCart} className={styles.button}>
+				<p className={isInStock ? styles.available : styles.inavailable}>
+					{isInStock ? 'Available' : 'Not available'}
+				</p>
+				<button
+					disabled={!isInStock}
+					onClick={handleAddToCart}
+					className={styles.button}
+				>
 					Add to cart
 				</button>
 			</div>

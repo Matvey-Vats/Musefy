@@ -1,12 +1,11 @@
 import React from 'react'
 import { BiCart } from 'react-icons/bi'
-import { useSelector } from 'react-redux'
+import { shallowEqual, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import styles from './Header.module.scss'
 
 const Header = () => {
-	const products = useSelector(state => state.cart.products)
-
+	const products = useSelector(state => state.cart.products, shallowEqual)
 	const totalCount = products.reduce((sum, item) => sum + item.count, 0)
 
 	return (

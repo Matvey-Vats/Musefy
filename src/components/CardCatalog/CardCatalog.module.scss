@@ -23,7 +23,14 @@
 		}
 
 		.available {
-			align-self: center;
+			font-weight: 700;
+			color: rgb(77, 206, 77);
+			font-family: 'Nunito';
+		}
+		.inavailable {
+			font-weight: 700;
+			color: rgb(236, 44, 44);
+			font-family: 'Nunito';
 		}
 
 		.button {
@@ -33,9 +40,18 @@
 			width: 100px;
 			height: 40px;
 			border-radius: 10px;
+			border: 1px solid transparent;
 
-			&:active {
+			&:not(:disabled):active {
 				transform: scale(0.95);
+			}
+
+			&:disabled {
+				opacity: 0.4;
+				cursor: default;
+				background-color: transparent;
+				color: #242424;
+				border-color: #242424;
 			}
 		}
 	}

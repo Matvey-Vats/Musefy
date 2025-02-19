@@ -1,0 +1,45 @@
+.pagination {
+	margin-top: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	column-gap: 15px;
+
+	li {
+		cursor: pointer;
+		font-family: 'Nunito', sans-serif;
+		font-size: 20px;
+		a {
+			transition: opacity 0.3s ease;
+
+			&:hover {
+				opacity: 0.5;
+			}
+		}
+	}
+
+	:global {
+		.selected {
+			a {
+				text-decoration: underline;
+				opacity: 0.8;
+			}
+		}
+		.previous,
+		.next {
+			a {
+				padding: 5px 10px;
+				border-radius: 10px;
+				background-color: #242424;
+				color: #fff;
+			}
+			&.disabled {
+				a {
+					background-color: transparent;
+					color: #242424;
+					border: 1px solid #242424;
+				}
+			}
+		}
+	}
+}
