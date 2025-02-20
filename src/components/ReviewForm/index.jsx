@@ -70,13 +70,18 @@ const ReviewForm = ({ productId }) => {
 							/>
 						)}
 					/>
+					{errors.rating && (
+						<p className={styles.errorMessage}>{errors.rating.message}</p>
+					)}
 				</div>
 				<input
 					type='text'
 					placeholder='Enter your name: '
 					{...register('name', { required: 'Name is required' })}
 				/>
-				{errors.name && <p>{errors.name.message}</p>}
+				{errors.name && (
+					<p className={styles.errorMessage}>{errors.name.message}</p>
+				)}
 
 				<input
 					type='email'
@@ -89,7 +94,9 @@ const ReviewForm = ({ productId }) => {
 						},
 					})}
 				/>
-				{errors.email && <p>{errors.email.message}</p>}
+				{errors.email && (
+					<p className={styles.errorMessage}>{errors.email.message}</p>
+				)}
 
 				<textarea
 					value={text}
@@ -99,7 +106,9 @@ const ReviewForm = ({ productId }) => {
 					{...register('review', { required: 'Review is required' })}
 				/>
 				<span>{MAX_LENGTH - text.length} symbols left</span>
-				{errors.review && <p>{errors.review.message}</p>}
+				{errors.review && (
+					<p className={styles.errorMessage}>{errors.review.message}</p>
+				)}
 
 				<button type='submit'>Send</button>
 			</form>

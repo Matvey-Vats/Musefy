@@ -1,6 +1,7 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
+import { Rating } from 'react-simple-star-rating'
 import { addProduct } from '../../redux/slices/cartSlice'
 import styles from './CardCatalog.module.scss'
 const CardCatalog = ({
@@ -12,6 +13,8 @@ const CardCatalog = ({
 	isInStock,
 	image,
 	description,
+	reviews,
+	rating,
 }) => {
 	const dispatch = useDispatch()
 
@@ -38,6 +41,8 @@ const CardCatalog = ({
 			<div className={styles.content}>
 				<Link to={`/catalog/${id}`}>
 					<h4 className={styles.title}>{name}</h4>
+					<Rating size={20} readonly initialValue={rating} />
+					<span>({reviews.length})</span>
 				</Link>
 				<p className={styles.price}>{price}$</p>
 				<p className={isInStock ? styles.available : styles.inavailable}>

@@ -2,8 +2,10 @@ import clsx from 'clsx'
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import { useNavigate, useParams } from 'react-router-dom'
+import { Rating } from 'react-simple-star-rating'
 import ReviewForm from '../../../components/ReviewForm'
 import ReviewList from '../../../components/ReviewList'
+import Spinner from '../../../components/Spinner'
 import { addProduct } from '../../../redux/slices/cartSlice'
 import styles from './ProductDetail.module.scss'
 
@@ -29,8 +31,21 @@ const ProductDetail = () => {
 		}
 		fetchProduct()
 	}, [])
+
 	if (!product) {
-		return <div>LOADING...</div>
+		return (
+			<div className='container'>
+				<div
+					style={{
+						display: 'flex',
+						alignItems: 'center',
+						justifyContent: 'center',
+					}}
+				>
+					<Spinner />
+				</div>
+			</div>
+		)
 	}
 	return (
 		<div className='container'>
@@ -39,7 +54,11 @@ const ProductDetail = () => {
 					<img src={product.image} alt='' />
 					<div className={styles.content}>
 						<div className={styles.contentTop}>
-							<h4 className={styles.title}>{product.name}</h4>
+							<div>
+								<h4 className={styles.title}>{product.name}</h4>
+								<Rating size={20} readonly initialValue={product.rating} />
+								<span>({product.reviews.length})</span>
+							</div>
 							<span className={styles.price}>{product.price}$</span>
 						</div>
 						{product.isInStock ? (

@@ -37,9 +37,16 @@ export const addReview = createAsyncThunk(
 			)
 			const product = await productResponse.json()
 
+			const updatedReviews = [...product.reviews, review]
+
+			const newRating =
+				updatedReviews.reduce((sum, r) => sum + r.rating, 0) /
+				updatedReviews.length
+
 			const updatedProduct = {
 				...product,
-				reviews: [...product.reviews, review],
+				reviews: updatedReviews,
+				rating: parseFloat(newRating.toFixed(1)),
 			}
 
 			const response = await fetch(
@@ -54,7 +61,7 @@ export const addReview = createAsyncThunk(
 				throw new Error('Failed to add review')
 			}
 
-			return { productId, review }
+			return { productId, review, newRating: updatedProduct.rating }
 		} catch (error) {
 			return rejectWithValue(error.message)
 		}

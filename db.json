@@ -166,7 +166,15 @@
 			"brand": "Harley Benton",
 			"image": "https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/bdb/_26/264956/14715621_800.jpg",
 			"description": "Ovangkol body Neck through body (neck thru) 7-Piece Mahogany/Maple/Nato Neck Black Walnut Fingerboard Abalone oval shaped inlays 24 frets Capo width: 40mm 864mm long scale 2 ceramic bar pads Active preamplifier black hardware Die-cast tuning pegs String gauge: 45-105 Finish: Natural satin",
-			"reviews": []
+			"reviews": [
+				{
+					"id": 1,
+					"user": "John Doe",
+					"comment": "Amazing quality!",
+					"rating": 5
+				}
+			],
+			"rating": 5
 		},
 		{
 			"id": "11",
@@ -177,7 +185,14 @@
 			"isInStock": false,
 			"image": "https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/bdb/_60/608518/19758449_800.jpg",
 			"description": "Electric guitar Poplar wood body Bolt-on maple neck Indian Laurel Fingerboard White dot fretboard inlays Modern 'C' neck profile Fingerboard Radius: 241mm (9.5”) Scale length: 648 mm (25.5) Nut width: 42.86 mm (1.6875) Micarta nut 21 Medium Jumbo frets Pickups: 2 Player Standard Tele Single Coils Master volume and master tone controls 3-way pickup switch 3-ply white pickguard Standard Tele Steg bridge with string passage through the body and chrome-plated steel block saddles Fender Standard mechanics with Hex buttons Chrome hardware Original factory string: Nickel Plated Steel .009 - .042 Color: 3-Color Sunburst",
-			"reviews": []
+			"reviews": [
+				{
+					"user": "Bob Marley",
+					"comment": "Cool",
+					"rating": 4
+				}
+			],
+			"rating": 4
 		}
 	]
 }

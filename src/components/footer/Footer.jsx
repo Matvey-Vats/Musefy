@@ -67,13 +67,13 @@ const Footer = () => {
 							<h3>Contact Us</h3>
 						</li>
 						<li>
-							<p>Catalog</p>
+							<p>Email: support@example.com</p>
 						</li>
 						<li>
-							<p>About Us</p>
+							<p>Phone: +1 (234) 567-89-00</p>
 						</li>
 						<li>
-							<p>Contact Us</p>
+							<p>Address: 123 Music St, Los Angeles, CA</p>
 						</li>
 					</ul>
 				</div>
