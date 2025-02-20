@@ -3,7 +3,13 @@
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
-		column-gap: 10px;
+		gap: 10px;
+
+		@media (max-width: 620px) {
+			// overflow: auto;
+			// width: 300px;
+			// flex-wrap: nowrap;
+		}
 
 		li {
 			cursor: pointer;

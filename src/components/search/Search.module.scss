@@ -1,11 +1,12 @@
 .searchBlock {
+	width: 400px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 }
 
 .input {
-	width: 300px;
+	width: 100%;
 	border: 1px solid #242424;
 	padding: 10px;
 	border-radius: 7px;

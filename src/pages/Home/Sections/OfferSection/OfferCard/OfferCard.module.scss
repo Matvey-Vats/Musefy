@@ -8,6 +8,22 @@
 	border-radius: 20px;
 	gap: 30px;
 
+	@media (max-width: 900px) {
+		flex-direction: column;
+		background-color: transparent;
+		color: #242424;
+
+		img {
+			max-width: 300px;
+		}
+
+		.cardContent {
+			a {
+				color: #242424;
+			}
+		}
+	}
+
 	img {
 		width: 400px;
 		border-radius: 15px;

@@ -17,14 +17,32 @@ export const sortList = [
 const Sort = ({ value }) => {
 	const dispatch = useDispatch()
 	const [isOpen, setIsOpen] = React.useState(false)
+	const sortRef = React.useRef(null)
 
 	const onClickSort = obj => {
 		dispatch(setSort(obj))
 		setIsOpen(false)
 	}
 
+	React.useEffect(() => {
+		const handleClickOutside = event => {
+			if (!event.target) return
+
+			const menuElement = sortRef.current
+
+			if (isOpen && menuElement && !menuElement.contains(event.target)) {
+				setIsOpen(false)
+			}
+		}
+
+		document.addEventListener('click', handleClickOutside)
+		return () => {
+			document.removeEventListener('click', handleClickOutside)
+		}
+	}, [isOpen])
+
 	return (
-		<div>
+		<div ref={sortRef}>
 			<div onClick={() => setIsOpen(prev => !prev)} className={styles.label}>
 				<p className={styles.labelText}>
 					Sort by <span>{value.name}</span>

@@ -52,13 +52,13 @@ const Footer = () => {
 							<h3>Products</h3>
 						</li>
 						<li>
-							<Link>Guitar</Link>
+							<Link to={`/catalog?categoryId=1`}>Guitar</Link>
 						</li>
 						<li>
-							<Link>Drums</Link>
+							<Link to={`/catalog?categoryId=5`}>Drums</Link>
 						</li>
 						<li>
-							<Link>Piano</Link>
+							<Link to={`/catalog?categoryId=2`}>Bass guitars</Link>
 						</li>
 					</ul>
 

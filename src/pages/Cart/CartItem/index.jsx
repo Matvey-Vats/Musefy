@@ -8,6 +8,7 @@ import {
 	minusProduct,
 	removeProduct,
 } from '../../../redux/slices/cartSlice'
+import { truncateWords } from '../../../utils/truncateWords'
 import styles from './CartItem.module.scss'
 
 const CartItem = ({ id, image, name, price, brand, categoryId, count }) => {
@@ -46,7 +47,7 @@ const CartItem = ({ id, image, name, price, brand, categoryId, count }) => {
 				</button>
 			</div>
 			<div className={styles.cartItemContent}>
-				<h4 className={styles.itemTitle}>{name}</h4>
+				<h4 className={styles.itemTitle}>{truncateWords(name, 3)}</h4>
 				<p className={styles.itemPrice}>{price}$</p>
 				<div className={styles.itemCount}>
 					<button

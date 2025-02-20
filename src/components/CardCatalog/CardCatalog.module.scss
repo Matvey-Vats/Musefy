@@ -1,15 +1,25 @@
 .cardCatalog {
 	max-width: 350px;
 
+	justify-self: center;
+	// @media(max-width: 620px){
+
+	// }
+
 	.cardImg {
 		width: 350px;
 		aspect-ratio: 1;
+
+		@media (max-width: 620px) {
+			width: 250px;
+		}
 	}
 
 	.content {
+		text-align: left;
 		margin-top: 20px;
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: 1fr 100px;
 		gap: 30px 5px;
 
 		.title {

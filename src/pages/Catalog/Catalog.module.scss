@@ -3,6 +3,7 @@
 	justify-content: space-between;
 	align-items: center;
 	flex-wrap: wrap;
+	gap: 15px;
 
 	.title {
 		font-weight: 700;
@@ -14,8 +15,12 @@
 .filters {
 	margin-top: 30px;
 	display: flex;
+	column-gap: 15px;
 	align-items: flex-start;
 	justify-content: space-between;
+	@media (max-width: 620px) {
+		flex-direction: column-reverse;
+	}
 }
 
 .box {
@@ -25,6 +30,17 @@
 	gap: 60px 20px;
 	justify-content: space-between;
 	align-items: center;
+
+	@media (max-width: 1130px) {
+		grid-template-columns: repeat(2, 1fr);
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+	}
+
+	@media (max-width: 770px) {
+		grid-template-columns: 1fr;
+	}
 }
 
 .error {

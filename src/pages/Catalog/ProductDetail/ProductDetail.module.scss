@@ -4,8 +4,26 @@
 		align-items: flex-start;
 		justify-content: space-between;
 
+		@media (max-width: 870px) {
+			flex-direction: column;
+			align-items: center;
+			row-gap: 20px;
+
+			.content {
+				&Top {
+					.title {
+						font-size: 20px;
+					}
+				}
+			}
+		}
+
 		img {
 			width: 500px;
+
+			@media (max-width: 620px) {
+				width: 300px;
+			}
 		}
 
 		.content {

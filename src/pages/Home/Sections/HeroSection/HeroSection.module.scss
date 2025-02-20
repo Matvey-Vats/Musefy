@@ -42,3 +42,20 @@
 		}
 	}
 }
+
+@media (max-width: 620px) {
+	.heroImg {
+		display: none;
+	}
+	.content {
+		text-align: center;
+		position: initial;
+		margin-left: 0;
+		h2 {
+			font-size: 34px;
+		}
+		p {
+			font-size: 16px;
+		}
+	}
+}

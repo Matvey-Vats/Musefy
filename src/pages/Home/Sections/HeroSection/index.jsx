@@ -18,7 +18,7 @@ const HeroSection = () => {
 					Catalog <span>&rarr;</span>
 				</Link>
 			</div>
-			<img src={heroImg} alt='hero' style={{}} />
+			<img src={heroImg} alt='hero' className={styles.heroImg} />
 		</section>
 	)
 }
