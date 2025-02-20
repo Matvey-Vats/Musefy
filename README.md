@@ -1,8 +1,55 @@
-# React + Vite
+# Musefy
+Online music store
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a React application with JSON server support to store data about products and their reviews.
 
-Currently, two official plugins are available:
+## 🚀 Installation and launch of the project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 1. Cloning a repository
+```sh
+git clone https://github.com/ТВОЙ-USERNAME/ТВОЙ-РЕПОЗИТОРИЙ.git
+cd ТВОЙ-РЕПОЗИТОРИЙ
+```
+
+### 2. Installing dependencies
+```sh
+npm install
+```
+
+### 3. Starting the JSON server
+The project uses `json-server` to emulate the backend. To start the server, use the command:
+```sh
+npx json-server --watch db.json --port 3000
+```
+> `db.json` - this is a file containing test data. By default the server runs on `http://localhost:3000`.
+
+### 4. Running a React application
+After starting the JSON server, open a new terminal and run the React application:
+```sh
+npm run dev
+```
+> The application will be available at `http://localhost:5173` (or other port specified in the settings, `http://localhost:3000`).
+
+## 📂 Project structure
+```plaintext
+├── public/             # Static files
+├── src/                # Source code
+│   ├── components/     # UI Components
+│   ├── pages/          # Application Pages
+│   ├── redux/          # Redux state
+│   ├── styles/         # SCSS-styles
+│   ├── App.js          # Main component
+│   ├── main.js         # Entry point
+├── db.json             # JSON-сервер data base
+├── package.json        # Project Dependencies
+```
+
+## 🛠 Core Technologies
+- **React**
+- **Redux Toolkit**
+- **React Hook Form** 
+- **React Simple Star Rating**
+- **JSON-Server**
+
+
+
