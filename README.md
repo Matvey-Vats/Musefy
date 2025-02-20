@@ -7,8 +7,8 @@ This project is a React application with JSON server support to store data about
 
 ### 1. Cloning a repository
 ```sh
-git clone https://github.com/ТВОЙ-USERNAME/ТВОЙ-РЕПОЗИТОРИЙ.git
-cd ТВОЙ-РЕПОЗИТОРИЙ
+git clone https://github.com/Matvey-Vats/Musefy/
+cd Musefy
 ```
 
 ### 2. Installing dependencies
